@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>About - talktunelab 톡튠랩 </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <style>
+      body {
+        font-family: 'Pretendard', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900">
+    <!-- 헤더 -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold">talktunelab 톡튠랩 </h1>
+        <nav class="space-x-4 text-sm md:text-base">
+          <a href="index.html">Home</a>
+          <a href="about.html" class="text-blue-500 font-semibold">About</a>
+          <a href="works.html">Works</a>
+           <a href="design.html">Design</a> 
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 커버 이미지 -->
+    <section class="relative h-screen bg-cover bg-center flex items-center justify-center pt-16"
+             style="background-image: url('https://blog.adobe.com/ko/publish/2019/03/19/media_1681273e373afb30b153cb6de6483a4a2689e4df4.png?width=2000&format=webply&optimize=medium');">
+      <div class="bg-black bg-opacity-50 w-full h-full absolute top-0 left-0 z-0"></div>
+      <div class="z-10 text-center text-white px-6" data-aos="fade-up">
+        <h1 class="text-5xl font-bold mb-4">About Me</h1>
+        <p class="text-xl">talktunelab 톡튠랩 </p>
+      </div>
+    </section>
+
+    <!-- 본문 섹션 -->
+    <main class="pt-32 space-y-32 pb-24">
+      <!-- 소개 섹션 -->
+      <section class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-10" data-aos="fade-up">
+        <!-- 프로필 이미지 -->
+        <div class="w-40 h-40 rounded-full overflow-hidden shadow-lg">
+          <img src="https://ilovecharacter.com/news/data/20240426/p1065596372548020_924_thum.png" alt="프로필 사진" class="object-cover w-full h-full" />
+        </div>
+        <!-- 텍스트 -->
+        <div class="md:w-2/3 text-lg leading-relaxed">
+          <h2 class="text-3xl font-bold mb-3">안녕하세요! talktunelab 톡튠랩 입니다. </h2>
+          <p>
+            "카톡(Talk) + Tune(멜로디) + 연구소(Lab) <strong>🪄대화에서 멜로디로, AI가 만드는 음악 실험실."</strong>
+          
+          </p>
+        </div>
+      </section>
+
+      <!-- 경험 섹션 -->
+      <section class="container mx-auto px-6" data-aos="fade-up">
+        <h2 class="text-4xl font-bold mb-6 text-center">Experience</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg">
+          <div class="border-l-4 border-blue-400 pl-4">
+            <p class="font-semibold">톡튠랩 인스타그램 </p>
+          </div>
+          <div class="border-l-4 border-blue-400 pl-4">
+            <p class="font-semibold">톡튠랩 유튜브 </p>
+          </div>
+          <div class="border-l-4 border-blue-400 pl-4">
+            <p class="font-semibold">톡튠랩 틱톡 </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 스킬 섹션 -->
+      <section class="container mx-auto px-6" data-aos="fade-up">
+        <h2 class="text-4xl font-bold mb-6 text-center">Skills</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-lg">
+          <div class="bg-gray-100 p-4 rounded-lg shadow-sm">SUNO AI</div>
+          <div class="bg-gray-100 p-4 rounded-lg shadow-sm">Illustrator</div>
+          <div class="bg-gray-100 p-4 rounded-lg shadow-sm">Premiere Pro</div>
+          <div class="bg-gray-100 p-4 rounded-lg shadow-sm">Figma</div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 스크립트 -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init();</script>
+  </body>
+</html> 
