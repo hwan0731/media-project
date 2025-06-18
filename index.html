@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home - My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              pretendard: ['Pretendard', 'sans-serif'],
+            },
+            colors: {
+              'soft-gray': '#f3f4f6',
+            }
+          }
+        }
+      };
+    </script>
+  </head>
+  <body class="font-pretendard bg-white text-gray-900">
+    <!-- 헤더 -->
+    <header class="fixed w-full bg-white shadow-md z-50 transition-all">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold">talktunelab </h1>
+        <nav class="space-x-4 nav-links">
+          <a href="index.html" class="text-blue-500 font-semibold">Home</a>
+          <a href="about.html">About</a>
+          <a href="works.html">Works</a>
+          <a href="design.html">Design</a> 
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="h-screen bg-cover bg-center flex items-center justify-center pt-20"
+      style="background-image: url('images/image.png');">
+      <div class="bg-white bg-opacity-80 p-10 rounded-xl text-center max-w-2xl shadow-lg" data-aos="fade-up">
+        <h2 class="text-5xl font-bold mb-4">안녕하세요, talktunelab 톡튠랩 입니다!</h2>
+        <p class="text-lg text-gray-700">
+          카톡(Talk) + Tune(멜로디) + 연구소(Lab) <br>
+          🪄대화에서 멜로디로, AI가 만드는 음악 실험실
+        </p>
+      </div>
+    </section>
+
+    <!-- ABOUT ME -->
+    <section class="bg-gray-50 text-center" data-aos="fade-up">
+      <h2 class="section-title">👋 talktunelab </h2>
+      <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
+      </p>
+      <div class="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
+        <div class="bg-white rounded-lg shadow-md p-6 w-64 card-hover" data-aos="zoom-in">
+          <h3 class="text-xl font-semibold mb-2">🎥 콘텐츠 제작</h3>
+          <p class="text-gray-600 text-sm">영상, 숏폼, SNS 콘텐츠 업로드 </p>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 w-64 card-hover" data-aos="zoom-in" data-aos-delay="100">
+          <h3 class="text-xl font-semibold mb-2">🎨 디자인</h3>
+          <p class="text-gray-600 text-sm">포스터, SUNOAI, 편집 </p>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6 w-64 card-hover" data-aos="zoom-in" data-aos-delay="200">
+          <h3 class="text-xl font-semibold mb-2">📢 커뮤니케이션</h3>
+          <p class="text-gray-600 text-sm">기획·홍보·운영 </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 대표 작품 미리보기 -->
+    <section class="bg-soft-gray" data-aos="fade-up">
+      <h3 class="section-title">✨ 대표 숏폼 미리보기 </h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 container mx-auto px-6">
+        <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover">
+          <img src="images/image12.JPG" alt="작품1" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h4 class="font-semibold text-lg mb-2">톡튠랩 인스타그램 릴스 </h4>
+            <p class="text-sm text-gray-600">인기 릴스 </p>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover">
+          <img src="images/image10.JPG" alt="작품2" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h4 class="font-semibold text-lg mb-2">톡튠랩 유튜브 </h4>
+            <p class="text-sm text-gray-600">최근 숏폼 </p>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover">
+          <img src="images/image14.JPG" alt="작품3" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h4 class="font-semibold text-lg mb-2">톡튠랩 틱톡 </h4>
+            <p class="text-sm text-gray-600">인기 릴스 </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
