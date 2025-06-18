@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Works - talktunelab 톡튠랩 </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <style>
+      body {
+        font-family: 'Pretendard', sans-serif;
+      }
+      .work-card img {
+        transition: transform 0.4s ease;
+      }
+      .work-card:hover img {
+        transform: scale(1.05);
+      }
+      .btn-toggle {
+        @apply bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900">
+    <!-- 헤더 -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold">talktunelab </h1>
+        <nav class="space-x-4 text-sm md:text-base">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="works.html" class="text-blue-500 font-semibold">Works</a>
+          <a href="design.html">Design</a> 
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 타이틀 -->
+    <section class="pt-32 pb-10 text-center" data-aos="fade-up">
+      <h1 class="text-5xl font-bold mb-2">talktunelab </h1>
+      <p class="text-lg text-gray-600">talktunelab 톡튠랩입니다. </p>
+    </section>
+
+    <!-- 작품 갤러리 -->
+    <main class="container mx-auto px-6 pb-24">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="200">
+        
+        <!-- 예시 카드 1 -->
+        <div class="work-card cursor-pointer group overflow-hidden rounded-lg shadow-md bg-white" onclick="showDetail(1)">
+          <img src="images/image12.JPG" alt="프로젝트1" class="w-full h-64 object-cover" />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">톡튠랩 인스타그램 </h3>
+            <p class="text-sm text-gray-600">조회수 1.6만 돌파! </p>
+          </div>
+        </div>
+
+        <!-- 예시 카드 2 -->
+        <div class="work-card cursor-pointer group overflow-hidden rounded-lg shadow-md bg-white" onclick="showDetail(2)">
+          <img src="images/image10.JPG" alt="프로젝트2" class="w-full h-64 object-cover" />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">톡튠랩 유튜브 </h3>
+            <p class="text-sm text-gray-600">조회수 4.8천회 돌파! </p>
+          </div>
+        </div>
+
+        <!-- 예시 카드 3 -->
+        <div class="work-card cursor-pointer group overflow-hidden rounded-lg shadow-md bg-white" onclick="showDetail(3)">
+          <img src="images/image14.JPG" alt="프로젝트3" class="w-full h-64 object-cover" />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">톡튠랩 틱톡 </h3>
+            <p class="text-sm text-gray-600">톡튠랩 틱톡 새 릴스 업로드! </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 상세 내용 영역 -->
+      <div id="detailSection" class="mt-16 hidden max-w-4xl mx-auto border-t pt-8" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-4" id="detailTitle">제목</h2>
+        <img id="detailImage" src="" alt="상세 이미지" class="w-full rounded-lg mb-6 shadow-lg" />
+        <p class="text-lg text-gray-700 mb-6" id="detailDescription">설명 텍스트</p>
+
+        <!-- 작업과정 버튼 -->
+        <button id="toggleProcessBtn" class="btn-toggle mb-6" onclick="toggleProcess()">작업과정 보기</button>
+
+        <!-- 작업과정 상세 영역 -->
+        <div id="processSection" class="hidden bg-gray-50 p-6 rounded-lg shadow-inner text-gray-700">
+          <!-- 작업과정 내용은 showDetail에서 세팅 -->
+          <h3 class="text-2xl font-semibold mb-4">작업과정</h3>
+          <ul class="list-disc list-inside space-y-2" id="processList"></ul>
+        </div>
+      </div>
+    </main>
+
+    <!-- 스크립트 -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
+    <script>
+      const detailData = {
+        1: {
+          title: "톡튠랩 인스타그램",
+          image: "images/image11.JPG",
+          description: "조회수 1.6만 돌파!",
+          process: [
+            "인기 릴스",
+          ]
+        },
+        2: {
+          title: "톡튠랩 유튜브",
+          image: "images/image10.JPG",
+          description: "지난 28일 동안 채널의 조회수가 9,561회입니다",
+          process: [
+            "이 기간의 내 인기 콘텐츠"
+          ]
+        },
+        3: {
+          title: "톡튠랩 틱톡",
+          image: "images/image13.JPG",
+          description: "새로운 릴스 업로드",
+          process: [
+            "톡튠랩 틱톡 많관부!!!"
+          ]
+        }
+      };
+
+      function showDetail(index) {
+        const data = detailData[index];
+        document.getElementById("detailTitle").textContent = data.title;
+        document.getElementById("detailImage").src = data.image;
+        document.getElementById("detailDescription").textContent = data.description;
+
+        // 작업과정 초기화 및 숨기기
+        const processSection = document.getElementById("processSection");
+        processSection.classList.add("hidden");
+        document.getElementById("toggleProcessBtn").textContent = "작업과정 보기";
+
+        // 작업과정 리스트 세팅
+        const processList = document.getElementById("processList");
+        processList.innerHTML = "";
+        data.process.forEach(step => {
+          const li = document.createElement("li");
+          li.textContent = step;
+          processList.appendChild(li);
+        });
+
+        // 상세 영역 보이기
+        document.getElementById("detailSection").classList.remove("hidden");
+        // 부드럽게 스크롤 이동
+        window.scrollTo({
+          top: document.getElementById("detailSection").offsetTop - 100,
+          behavior: "smooth"
+        });
+      }
+
+      function toggleProcess() {
+        const processSection = document.getElementById("processSection");
+        const btn = document.getElementById("toggleProcessBtn");
+        if (processSection.classList.contains("hidden")) {
+          processSection.classList.remove("hidden");
+          btn.textContent = "작업과정 닫기";
+        } else {
+          processSection.classList.add("hidden");
+          btn.textContent = "작업과정 보기";
+        }
+      }
+    </script>
+  </body>
+</html>
